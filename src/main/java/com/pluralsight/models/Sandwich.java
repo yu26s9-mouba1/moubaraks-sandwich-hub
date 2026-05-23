@@ -19,7 +19,7 @@ public class Sandwich extends Product {
     }
 
 
-    //Getters 
+    //Getters
     public int getSandwichSize() {
         return sandwichSize;
     }
