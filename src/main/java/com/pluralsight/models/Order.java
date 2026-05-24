@@ -30,7 +30,7 @@ public class Order {
     }
 
     /**
-     * Creates the menu order summary text (details of the order)
+     *Generates receipts with all the  details
      */
     public String getReceipt() {
         String details = "";

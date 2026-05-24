@@ -21,7 +21,10 @@ public class Chips extends Product {
     }
 
 
-    //Override methods to get the appropriate chip calculations
+    /**
+     * Override methods to get the appropriate chip calculations
+     * @returns the price and chip type
+     */
     @Override
     //returns 1.50 for any type of chip
     public double getPrice() {
@@ -29,6 +32,7 @@ public class Chips extends Product {
 
     }
 
+    //Generates receipt
     @Override
     public String getDetails() {
         return "chipType : " + chipType ;

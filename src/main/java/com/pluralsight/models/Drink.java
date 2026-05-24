@@ -28,7 +28,9 @@ public class Drink extends Product {
         this.drinkSize = drinkSize;
     }
 
-    //Override Methods to calculate the price of drinks
+    /**
+     *  Override Methods to calculate the price of drinks
+     */
     @Override
     //Calculates the drink price
     public double getPrice() {
@@ -43,7 +45,7 @@ public class Drink extends Product {
     }
 
     @Override
-    //Gets details for receipt
+    //Generates receipts details
     public String getDetails(){
         return "Drink: " + drinkSize + " " + flavour;
 

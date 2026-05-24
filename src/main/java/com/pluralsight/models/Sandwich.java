@@ -19,7 +19,7 @@ public class Sandwich extends Product {
     }
 
 
-    //Getters
+    //Getters and setters
     public int getSandwichSize() {
         return sandwichSize;
     }
@@ -45,17 +45,18 @@ public class Sandwich extends Product {
     }
 
 
-
-
-
-   //Adds a topping to the sandwich's topping list
+    /**
+     *  Adds a topping to the sandwich's topping list
+     */
     public void addTopping(Topping topping) {
         toppings.add(topping);
 
     }
 
 
-    //Calculates and return the cost of the product
+    /**
+     * Calculates and return the cost of the product
+     */
     @Override
     public double getPrice() {
         if (sandwichSize == 4) {
@@ -71,8 +72,11 @@ public class Sandwich extends Product {
 
         }
 
-    //Returns a readable description of the product
+    /**
+     * Returns a readable description of the product
+     */
     @Override
+    //Generates receipt
     public String getDetails(){
         return   "Size:" + sandwichSize +
                 " Bread: " + bread +
