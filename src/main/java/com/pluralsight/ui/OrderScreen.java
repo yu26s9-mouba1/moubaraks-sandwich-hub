@@ -1,5 +1,7 @@
 package com.pluralsight.ui;
+import com.pluralsight.models.Chips;
 
+import com.pluralsight.models.Drink;
 import com.pluralsight.models.Order;
 import com.pluralsight.models.Sandwich;
 import com.pluralsight.models.Topping;
@@ -171,7 +173,7 @@ public class OrderScreen {
         String toppingChoice;
         do {
             String toppingsMenu = """
-                    Select Your Toppings:
+                    Toppings Menu
                     1- Meats
                     2- Cheese
                     3- Other toppings
@@ -179,7 +181,7 @@ public class OrderScreen {
                 
                  """;
             System.out.println(toppingsMenu);
-            toppingChoice = Console.promptForString("Enter your option: ");
+            toppingChoice = Console.promptForString("Select Your Toppings: ");
             switch (toppingChoice.toUpperCase()) {
                 case "1": {
                     //Prompts user for meat options
@@ -215,7 +217,7 @@ public class OrderScreen {
                     }
                     case "4": {
                         //Prompts user for sauce options
-                        String sauceName = Console.promptForString("Select Sauce: mayo, mustard, ketchup, ranch, thousand islands, vinaigrette");
+                        String sauceName = Console.promptForString("Select Sauce: mayo, mustard, ketchup, ranch, thousand islands, vinaigrette").toUpperCase();
                         String sauceType = "Sauces";
                         boolean isExtra = Console.promptForBool("Extra Sauce?: true / false");
 
@@ -246,7 +248,7 @@ public class OrderScreen {
                 
                 """;
             System.out.println(toastingMenu);
-            toastedChoice = Console.promptForString("Enter Your Option: ");
+            toastedChoice = Console.promptForString("Enter Your Option: ").toUpperCase();
 
             switch (toastedChoice.toUpperCase()) {
 
@@ -267,10 +269,10 @@ public class OrderScreen {
                 && !toppingChoice.equalsIgnoreCase("2"));
 
 
-        //Creates the toasted sandwich
+        //Creates the new toasted sandwich object
         sandwich.setToasted(isToasted);
 
-        //Stores the sandwich in the order
+        //Stores the sandwich object in the order
         order.addItem(sandwich);
 
 
@@ -279,13 +281,114 @@ public class OrderScreen {
 
 
     /**
-     *
+     * Displays different drink/size/flavor options for customer
+     * Creates a new drink object
+     * Stores the new drink into the order
      */
-    public void addDrink() {
+    public void addDrink(Order order) {
+        Drink drink;
+
+        // Drink Size Options
+        String drinkChoice;
+        String drinkSize = "";
+
+        do {
+            String drinkMenu = """
+                Drink Size Menu:
+                1- small
+                2- Medium
+                3- Large
+            """;
+            System.out.println(drinkMenu);
+
+            drinkChoice = Console.promptForString("Enter Drink Size: ");
+
+            switch (drinkChoice.toUpperCase()) {
+                case "1": {
+                    drinkSize = "small";
+                    break;
+                }
+                case "2": {
+                    drinkSize = "medium";
+                    break;
+                }
+                case "3": {
+                    drinkSize = "large";
+                    break;
+                }
+                default:
+                    System.out.println("Invalid Drink Size!");
+                    break;
+
+            }
+
+        }while (!drinkChoice.equalsIgnoreCase("1")
+                && !drinkChoice.equalsIgnoreCase("2")
+                && !drinkChoice.equalsIgnoreCase("3"));
+
+
+        //Drink Flavor Options
+        String choice;
+        String drinkFlavor = "";
+        do {
+            String drinkFlavorMenu = """
+                Flavors Menu:
+                1- Coke
+                2- Sprite
+                3- Pepsi
+                4- Lemonade
+                5- Arizona
+            """;
+            System.out.println(drinkFlavorMenu);
+            choice = Console.promptForString("Enter Drink Flavor: ");
+
+            switch (choice.toUpperCase()) {
+                case "1": {
+                    drinkFlavor = "Coke";
+                    break;
+                }
+                case "2": {
+                    drinkFlavor = "Sprite";
+                    break;
+                }
+                case "3": {
+                    drinkFlavor = "Pepsi";
+                    break;
+                }
+                case "4": {
+                    drinkFlavor = "Lemonade";
+                    break;
+                }
+                case "5": {
+                    drinkFlavor = "Arizona";
+                    break;
+                }
+                default:
+                    System.out.println("Invalid Drink Flavor!");
+                }
+            } while (!choice.equalsIgnoreCase("1")
+        && !choice.equalsIgnoreCase("2")
+        && !choice.equalsIgnoreCase("3")
+        && !choice.equalsIgnoreCase("4")
+        && !choice.equalsIgnoreCase("5"));
+
+        //Creates the new drink object
+         drink = new Drink(drinkSize, drinkFlavor);
+
+        //Stores drink to the order
+        order.addItem(drink);
+
+
+
+
+
+
+
+
 
     }
 
-    public void addChips() {
+    public void addChips(Order order ) {
 
     }
     public void checkOut() {

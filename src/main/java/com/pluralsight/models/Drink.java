@@ -3,21 +3,21 @@ package com.pluralsight.models;
 public class Drink extends Product {
 
     private String drinkSize;
-    private String flavour;
+    private String flavor;
 
-    //Constructors
-    public Drink(String drinkSize, String flavour) {
+    //Constructor
+    public Drink(String drinkSize, String flavor) {
         this.drinkSize = drinkSize;
-        this.flavour = flavour;
+        this.flavor = flavor;
     }
 
     //Getters and Setters
-    public String getFlavour() {
-        return flavour;
+    public String getFlavor() {
+        return flavor;
     }
 
-    public void setFlavour(String flavour) {
-        this.flavour = flavour;
+    public void setFlavour(String flavor) {
+        this.flavor = flavor;
     }
 
     public String getDrinkSize() {
@@ -47,7 +47,7 @@ public class Drink extends Product {
     @Override
     //Generates receipts details
     public String getDetails(){
-        return "Drink: " + drinkSize + " " + flavour;
+        return "Drink: " + drinkSize + " " + flavor;
 
     }
 }
