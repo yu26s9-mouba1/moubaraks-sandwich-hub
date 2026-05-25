@@ -4,13 +4,13 @@ public class Topping {
 
     private String name;
     private String type;
-    private boolean extra;
+    private boolean isExtra;
 
     //Constructors
-    public Topping(String name, String type, boolean extra) {
+    public Topping(String name, String type, boolean isExtra) {
         this.name = name;
         this.type = type;
-        this.extra = extra;
+        this.isExtra = isExtra;
     }
 
 
@@ -32,11 +32,11 @@ public class Topping {
     }
 
     public boolean isExtra() {
-        return extra;
+        return isExtra;
     }
 
-    public void setExtra(boolean extra) {
-        this.extra = extra;
+    public void setExtra(boolean isExtra) {
+        this.isExtra = isExtra;
     }
 
 
