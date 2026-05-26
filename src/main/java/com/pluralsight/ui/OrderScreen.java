@@ -67,16 +67,16 @@ public class OrderScreen {
                     addSandwich();
                     break;
                 case "2":
-                    addDrink();
+                    addDrink(order);
                     break;
                 case "3":
-                    addChips();
+                    addChips(order);
                     break;
                 case "4":
-                    checkOut();
+                    checkOut(order);
                     break;
                 case "0":
-                    cancelOrder();
+                    cancelOrder(order);
                     break;
                 default:
                     System.out.println("Invalid option!");
@@ -275,9 +275,6 @@ public class OrderScreen {
 
         //Stores the sandwich object in the order
         order.addItem(sandwich);
-
-
-
     }
 
 
@@ -379,14 +376,6 @@ public class OrderScreen {
         //Stores drink to the order
         order.addItem(drink);
 
-
-
-
-
-
-
-
-
     }
 
     /**
@@ -446,7 +435,7 @@ public class OrderScreen {
     /**
      * Generates receipt details
      * Monitors user decision either to proceed with or cancel the order
-     * Creates new receipt object and save it 
+     * Creates new receipt object and save it
      */
     public void checkOut(Order order) {
         //Gets order summary
@@ -475,7 +464,8 @@ public class OrderScreen {
                     break;
 
                     case "0":
-                        System.out.println("Order has been Cancelled!");
+                        //Cancels order and returns to the main menu
+                       cancelOrder(order);
                         return;
                 default:
                     System.out.println("Invalid Checkout!");
@@ -486,11 +476,18 @@ public class OrderScreen {
 
 
 
-    }
-
-    public void cancelOrder() {
 
     }
+
+    /**
+     * Clears order
+     */
+    public  void cancelOrder(Order order) {
+        order.getItems().clear();
+        System.out.println("Order has been cancelled!");
+    }
+
+
 }
 
 

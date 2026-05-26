@@ -6,8 +6,14 @@ public class Order {
 
     private ArrayList<Product> items;
 
+    //Constructor
     public Order() {
         this.items = new ArrayList<>();
+    }
+
+    //Getter
+    public ArrayList<Product> getItems() {
+        return items;
     }
 
     /**
