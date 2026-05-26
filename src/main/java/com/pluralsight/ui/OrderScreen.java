@@ -5,6 +5,7 @@ import com.pluralsight.models.Drink;
 import com.pluralsight.models.Order;
 import com.pluralsight.models.Sandwich;
 import com.pluralsight.models.Topping;
+import com.pluralsight.services.ReceiptFileManager;
 
 public class OrderScreen {
 
@@ -441,7 +442,49 @@ public class OrderScreen {
 
 
     }
-    public void checkOut() {
+
+    /**
+     * Generates receipt details
+     * Monitors user decision either to proceed with or cancel the order
+     * Creates new receipt object and save it 
+     */
+    public void checkOut(Order order) {
+        //Gets order summary
+        System.out.println(order.getReceipt());
+
+        String choice = "";
+        do {
+            String checkoutMenu = """
+                Checkout Menu:
+                1- Confirm
+                0- Cancel
+            """;
+            System.out.println(checkoutMenu);
+            choice = Console.promptForString("Do you want to proceed?: ");
+
+            switch (choice.toUpperCase()) {
+                case "1":
+                    //Calculates the total price of the order if customer chooses to continue
+                    double total = order.getTotal();
+                    System.out.println("Total: $" + total);
+
+                    //Creates a new receipt object and Saves it
+                    ReceiptFileManager receiptFileManager = new ReceiptFileManager();
+                    receiptFileManager.saveReceipt(order);
+                    System.out.println("Receipt has been saved successfully!");
+                    break;
+
+                    case "0":
+                        System.out.println("Order has been Cancelled!");
+                        return;
+                default:
+                    System.out.println("Invalid Checkout!");
+            }
+        } while (!choice.equalsIgnoreCase("1") && !choice.equalsIgnoreCase("0"));
+
+
+
+
 
     }
 

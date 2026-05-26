@@ -13,7 +13,7 @@ public class ReceiptFileManager {
      * Saves the customer receipt into a txt file
      * @param order the completed customer order
      */
-    public void SaveReceipt(Order order){
+    public void saveReceipt(Order order){
 
         //Handles exceptions
         try {
