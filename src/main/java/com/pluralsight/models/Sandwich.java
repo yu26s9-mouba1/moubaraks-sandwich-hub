@@ -78,9 +78,9 @@ public class Sandwich extends Product {
     @Override
     //Generates receipt
     public String getDetails(){
-        return   "Size:" + sandwichSize +
-                " Bread: " + bread +
-                " Toasted: " + isToasted;
+        return   "Sandwich Size:" + sandwichSize +
+                " Bread Type: " + bread +
+                " Sandwich Toasted: " + isToasted;
 
     }
 

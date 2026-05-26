@@ -20,7 +20,7 @@ public class Order {
      * Adds product into an order
      */
    public void addItem(Product item) {
-      items.add(item);
+      items.add(0, item);
    }
 
     /**

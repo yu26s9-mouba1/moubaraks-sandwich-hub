@@ -17,10 +17,16 @@ public class ReceiptFileManager {
 
         //Handles exceptions
         try {
+
+            //Receipt Files directory
+            File dir = new File("receipts");
+            dir.mkdirs();
+
+
             //Creates receipt path
-            DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyy-MM-dd - HH:mm:ss");
-            //generates timestamp filename
-            String fileName = LocalDateTime.now().format(dtf) + ".txt";
+            DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyy-MM-dd - HH-mm-ss");
+            //generates timestamp
+            String fileName  = LocalDateTime.now().format(dtf) + ".txt";
             String filePath = "receipts/" + fileName;
              //Writes receipt text
             BufferedWriter bw = new BufferedWriter(new FileWriter(filePath));

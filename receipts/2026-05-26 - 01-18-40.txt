@@ -1,0 +1,4 @@
+chipType : Corn Chips
+Drink: medium Pepsi
+Size:4 Bread: White Toasted: true
+Total Price: 9.5

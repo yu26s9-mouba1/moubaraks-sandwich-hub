@@ -1,0 +1,5 @@
+chipType : Corn Chips
+Drink: large Arizona
+Sandwich Size:12 Bread Type: Rye Sandwich Toasted: false
+Sandwich Size:12 Bread Type: Wheat Sandwich Toasted: true
+Total Price: 21.5

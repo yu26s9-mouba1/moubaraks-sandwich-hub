@@ -1,0 +1,6 @@
+Size:4 Bread: White Toasted: true
+Drink: large Arizona
+chipType : Tortilla Chips
+chipType : Potato Chips
+Size:8 Bread: Rye Toasted: true
+Total Price: 18.5

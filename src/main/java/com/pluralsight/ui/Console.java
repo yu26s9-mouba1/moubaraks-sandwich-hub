@@ -30,7 +30,7 @@ public class Console {
      * @return the string the user selected.
      */
     public static String promptForString(String prompt) {
-        System.out.print(prompt);
+        System.out.println(prompt);
         return scanner.nextLine();
     }
 
