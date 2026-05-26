@@ -343,22 +343,22 @@ public class OrderScreen {
             choice = Console.promptForString("Enter Drink Flavor: ");
 
             switch (choice.toUpperCase()) {
-                case "1": {
+                case "1":
                     drinkFlavor = "Coke";
                     break;
-                }
-                case "2": {
+
+                case "2":
                     drinkFlavor = "Sprite";
                     break;
-                }
-                case "3": {
+
+                case "3":
                     drinkFlavor = "Pepsi";
                     break;
-                }
-                case "4": {
+
+                case "4":
                     drinkFlavor = "Lemonade";
                     break;
-                }
+
                 case "5": {
                     drinkFlavor = "Arizona";
                     break;
@@ -388,7 +388,57 @@ public class OrderScreen {
 
     }
 
-    public void addChips(Order order ) {
+    /**
+     * Displays different types of chips
+     * Creates new chip object and stores it into order
+     */
+    public void addChips(Order order) {
+        Chips chips;
+
+        //Chip Type Options
+        String choice;
+        String chipType = "";
+        do {
+            String chipMenu = """
+                Chips Menu:
+                1- Potato Chips
+                2- Tortilla Chips
+                3- Corn Chips
+            
+            """;
+            System.out.println(chipMenu);
+            choice = Console.promptForString("Enter Chip Type: ").toUpperCase();
+            switch (choice.toUpperCase()) {
+                case "1":
+                    chipType = "Potato Chips";
+                    break;
+
+                case "2":
+                    chipType = "Tortilla Chips";
+                    break;
+
+                case "3":
+                    chipType = "Corn Chips";
+                    break;
+
+                default:
+                    System.out.println("Invalid Chip Type!");
+                    break;
+
+
+            }
+
+        } while (!choice.equalsIgnoreCase("1")
+                && !choice.equalsIgnoreCase("2")
+                && !choice.equalsIgnoreCase("3"));
+
+        //Creates the new chip object
+        chips = new Chips(chipType);
+
+        //Stores the new chip object into order
+        order.addItem(chips);
+
+
 
     }
     public void checkOut() {
