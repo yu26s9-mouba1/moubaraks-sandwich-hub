@@ -55,7 +55,7 @@ public class Sandwich extends Product {
 
 
     /**
-     * Calculates and return the cost of the product
+     * Calculates and return the cost of the items
      */
     @Override
     public double getPrice() {
@@ -73,12 +73,12 @@ public class Sandwich extends Product {
         }
 
     /**
-     * Returns a readable description of the product
+     * Generates receipt and returns a readable description of the items
      */
     @Override
     //Generates receipt
     public String getDetails(){
-        return   "Sandwich Size:" + sandwichSize +
+        return   "Sandwich Size: " + sandwichSize +
                 " Bread Type: " + bread +
                 " Sandwich Toasted: " + isToasted;
 

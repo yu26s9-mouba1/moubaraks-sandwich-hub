@@ -43,6 +43,21 @@ public class Console {
 
     }
 
+    /**
+     * Prompts the user for an integer.
+     * @param prompt  to display the user
+     * @param scanner to interact with user
+     * @return the int the user selected.
+     */
+    public static int promptForInt(String prompt) {
+
+        System.out.print(prompt);
+        int result = scanner.nextInt();
+        scanner.nextLine();
+        return result;
+
+    }
+
 
     /**
      * Prompts the user for a date

@@ -1,0 +1,6 @@
+Sandwich Size:8 Bread Type: White Sandwich Toasted: true
+Sandwich Size:8 Bread Type: white Sandwich Toasted: true
+chipType : Tortilla Chips
+Drink: large Arizona
+Sandwich Size:8 Bread Type: White Sandwich Toasted: true
+Total Price: 25.5

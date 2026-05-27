@@ -1,0 +1,8 @@
+Drink: medium Pepsi $2.5
+Drink: medium Pepsi $2.5
+Drink: small Lemonade $2.0
+Drink: small Lemonade $2.0
+Drink: small Lemonade $2.0
+Drink: medium Coke $2.5
+Drink: medium Coke $2.5
+Total Price: 16.0

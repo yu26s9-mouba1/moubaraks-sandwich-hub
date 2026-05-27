@@ -22,7 +22,7 @@ public class Chips extends Product {
 
 
     /**
-     * Override methods to get the appropriate chip calculations
+     * Override methods to get the appropriate chip price
      * @returns the price and chip type
      */
     @Override

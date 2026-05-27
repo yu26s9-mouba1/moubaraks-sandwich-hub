@@ -24,7 +24,7 @@ public class Order {
    }
 
     /**
-     * Calculates the entire and return the total price
+     * Calculates the entire order and return the total price
      */
     public double getTotal() {
         double total = 0;

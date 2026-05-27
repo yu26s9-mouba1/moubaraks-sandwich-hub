@@ -1,0 +1,7 @@
+Drink: large Gatorade $3.0
+Drink: large Gatorade $3.0
+Drink: large Lemonade $3.0
+Drink: large Lemonade $3.0
+Drink: medium Ginger Ale $2.5
+Drink: medium Ginger Ale $2.5
+Total Price: 17.0

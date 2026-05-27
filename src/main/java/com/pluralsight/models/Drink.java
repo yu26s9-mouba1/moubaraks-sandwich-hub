@@ -30,6 +30,7 @@ public class Drink extends Product {
 
     /**
      *  Override Methods to calculate the price of drinks
+     *  Generates receipt details of drinks
      */
     @Override
     //Calculates the drink price
@@ -47,7 +48,7 @@ public class Drink extends Product {
     @Override
     //Generates receipts details
     public String getDetails(){
-        return "Drink: " + drinkSize + " " + flavor;
+        return "Drink: " + drinkSize + " " + flavor + " $" + getPrice();
 
     }
 }

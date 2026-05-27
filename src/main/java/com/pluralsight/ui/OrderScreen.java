@@ -16,12 +16,12 @@ public class OrderScreen {
         String option;
 
         do {
-            String homeMenu = """
-                    Welcome To DELI-Cious!
-                    1- New Order
-                    0- Exit
-                    """;
-            System.out.println(homeMenu);
+            String homeMenu = """ 
+             Welcome To DELI-Cious!
+                 1- New Order
+                 0- Exit
+             """;
+            System.out.println("                                                                         " + homeMenu );
             option = Console.promptForString("Enter A Command: ");
 
             switch (option.toUpperCase()) {
@@ -48,16 +48,16 @@ public class OrderScreen {
         String option;
         do {
             String orderMenu = """
-                    Order Menu
-                    1- Add Sandwich
-                    2- Add Drink
-                    3- Add Chips
-                    4- Checkout
-                    5- Signature Sandwiches
-                    0- Cancel Order
-            """;
+                                                                                                      Order Menu
+                                                                                                    1- Add Sandwich
+                                                                                                    2- Add Drink
+                                                                                                    3- Add Chips
+                                                                                                    4- Checkout
+                                                                                                    5- Signature Sandwiches
+                                                                                                    0- Cancel Order
+                                                                                                    """;
             System.out.println(orderMenu);
-            option = Console.promptForString("Enter A Command: ");
+            option = Console.promptForString("                                                      Enter A Command: ");
 
             switch (option.toUpperCase()) {
                 case "1":
@@ -79,7 +79,7 @@ public class OrderScreen {
                     cancelOrder(order);
                     break;
                 default:
-                    System.out.println("Invalid option!");
+                    System.out.println("                                                              Invalid option!");
 
 
             }
@@ -101,16 +101,16 @@ public class OrderScreen {
         String breadType = "";
         do {
             String sandwichMenu = """
-                    Select Your Bread:
-                    1- White
-                    2- Wheat
-                    3- rye
-                    4- wrap
+                                                                                                      Select Your Bread:
+                                                                                                           1- White
+                                                                                                           2- Wheat
+                                                                                                           3- rye
+                                                                                                           4- wrap
            
-            """;
+                                                                                                      """;
             System.out.println(sandwichMenu);
 
-            breadChoice = Console.promptForString("Enter A Command: ");
+            breadChoice = Console.promptForString("                                                 Enter A Command: ");
             switch (breadChoice.toUpperCase()) {
                 case "1":
                     breadType =  "White";
@@ -125,7 +125,7 @@ public class OrderScreen {
                     breadType = "Wrap";
                     break;
                 default:
-                    System.out.println("Invalid option!");
+                    System.out.println("                                                              Invalid option!");
             }
         }while (!breadChoice.equalsIgnoreCase("1")
                 && !breadChoice.equalsIgnoreCase("2")
@@ -138,13 +138,13 @@ public class OrderScreen {
            int sandwichSize = 0;
         do {
              String sandwichSizeMenu = """
-                    Select Your Sandwich Size:
-                    1 - Small
-                    2 - Medium
-                    3 - Large
-                    """;
+                                                                                              Select Your Sandwich Size:
+                                                                                                       1 - Small
+                                                                                                       2 - Medium
+                                                                                                       3 - Large
+                                                                                              """;
             System.out.println(sandwichSizeMenu);
-            choice = Console.promptForString("Enter A Command: ");
+            choice = Console.promptForString("                                                      Enter A Command: ");
             switch (choice.toUpperCase()) {
                 case "1":
                     sandwichSize = 4;
@@ -156,7 +156,7 @@ public class OrderScreen {
                     sandwichSize = 12;
                         break;
                 default:
-                    System.out.println("Invalid option!");
+                    System.out.println("                                                              Invalid option!");
 
             }
 
@@ -174,21 +174,21 @@ public class OrderScreen {
         String toppingChoice;
         do {
             String toppingsMenu = """
-                    Select Your Toppings
-                    1- Meats
-                    2- Cheese
-                    3- Other toppings
-                    4- Select sauces
+                                                                                                          Toppings Menu
+                                                                                                            1- Meats
+                                                                                                            2- Cheese
+                                                                                                            3- Other toppings
+                                                                                                            4- Select sauces
                 
-                 """;
+                                                                                                          """;
             System.out.println(toppingsMenu);
-            toppingChoice = Console.promptForString("Enter A Command: ");
+            toppingChoice = Console.promptForString("                                                     Enter A Command: ");
             switch (toppingChoice.toUpperCase()) {
                 case "1": {
                     //Prompts user for meat options
                     String toppingName = Console.promptForString("Choose Meat: Steak, Ham, Salami, Roast beef, chicken, bacon").toUpperCase();
                     String toppingType = "Meats";
-                    boolean isExtra = Console.promptForBool("Extra Meat? (yes/no): ");
+                    boolean isExtra = Console.promptForBool("                                   Extra Meat? (yes/no): ");
 
                     //Creates new meat topping
                     Topping meatTopping = new Topping(toppingName, toppingType, isExtra);
@@ -200,7 +200,7 @@ public class OrderScreen {
                         //Prompts user for cheese options
                         String cheeseName = Console.promptForString("Choose Cheese: American, Provolone, Cheddar, Swiss").toUpperCase();
                         String cheeseType = "Cheese";
-                        boolean isExtra = Console.promptForBool("Extra Cheese? (yes/no): ");
+                        boolean isExtra = Console.promptForBool("                             Extra Cheese? (yes/no): ");
 
                         //Creates new cheese topping
                         Topping cheeseTopping = new Topping(cheeseName, cheeseType, isExtra);
@@ -211,7 +211,7 @@ public class OrderScreen {
                         String toppingName = Console.promptForString("Choose Other Toppings: lettuce, peppers, onions, tomatoes, jalapenos, cucumbers, pickles, guacamole, mushrooms").toUpperCase();
                         String toppingType = "Regular Toppings";
                         boolean isExtra =
-                                Console.promptForBool("Extra Topping? (yes/no): ");
+                                Console.promptForBool("                                     Extra Topping? (yes/no): ");
 
                         //Creates new topping object
                         Topping otherTopping = new Topping(toppingName, toppingType, isExtra);
@@ -221,7 +221,7 @@ public class OrderScreen {
                         //Prompts user for sauce options
                         String sauceName = Console.promptForString("Select Sauce: mayo, mustard, ketchup, ranch, thousand islands, vinaigrette").toUpperCase();
                         String sauceType = "Sauces";
-                        boolean isExtra = Console.promptForBool("Extra Sauce? (yes/no): ");
+                        boolean isExtra = Console.promptForBool("                             Extra Sauce? (yes/no): ");
 
                         //Create the sauce topping
                         Topping sauceTopping = new Topping(sauceName, sauceType, isExtra );
@@ -244,13 +244,13 @@ public class OrderScreen {
 
         do {
             String toastingMenu = """
-                Would You Like The Sandwich Toasted?
-                1- Yes
-                2- No
+                                                                                    Would You Like The Sandwich Toasted?
+                                                                                                   1- Yes
+                                                                                                   2- No
                 
-                """;
+                                                                                    """;
             System.out.println(toastingMenu);
-            toastedChoice = Console.promptForString("Enter A Command: ");
+            toastedChoice = Console.promptForString("                                         Enter A Command: ");
 
             switch (toastedChoice.toUpperCase()) {
 
@@ -262,7 +262,7 @@ public class OrderScreen {
                     isToasted = false;
                     break;
                 }
-                default: System.out.println("Invalid Choice!");
+                default: System.out.println("                                                  Invalid Choice!");
                 break;
 
             }
@@ -276,7 +276,7 @@ public class OrderScreen {
 
         //Stores the sandwich object in the order
         order.addItem(sandwich);
-        System.out.println("Sandwich successfully added!");
+        System.out.println("                                                             Sandwich successfully added!");
     }
 
 
@@ -332,54 +332,109 @@ public class OrderScreen {
         String drinkFlavor = "";
         do {
             String drinkFlavorMenu = """
-                Flavors Menu:
-                1- Coke
-                2- Sprite
-                3- Pepsi
-                4- Lemonade
-                5- Arizona
-            """;
+                        Flavors Menu:
+                        ++ Sodas ++
+                        1- Coke
+                        2- Sprite
+                        3- Pepsi
+                        4- Dr pepper
+                        5- Fanta
+                        6- Ginger Ale
+                    
+                        ++ Juices ++
+                        7- Apple Juice
+                        8- Orange Juice
+                        9- Cranberry Juice
+                    
+                        ++ Tea / Lemonade ++
+                        10- Arizona
+                        11- Sweet Tea
+                        12- Lemonade 
+                    
+                        ++ Water / Sports ++
+                        13- Regular Water
+                        14- Sparkling Water
+                        15- Gatorade
+                    
+                    """;
             System.out.println(drinkFlavorMenu);
             choice = Console.promptForString("Enter Drink Flavor: ");
+
+            //Handles switch options validation
+            int option = Integer.parseInt(choice.toUpperCase());
+            if (option < 1 || option > 15) {
+                System.out.println("Invalid Drink Flavor!");
+                continue;
+            }
 
             switch (choice.toUpperCase()) {
                 case "1":
                     drinkFlavor = "Coke";
                     break;
-
                 case "2":
                     drinkFlavor = "Sprite";
                     break;
-
                 case "3":
                     drinkFlavor = "Pepsi";
                     break;
-
                 case "4":
-                    drinkFlavor = "Lemonade";
+                    drinkFlavor = "Dr Pepper";
                     break;
-
-                case "5": {
+                case "5":
+                    drinkFlavor = "Fan";
+                    break;
+                case "6":
+                    drinkFlavor = "Ginger Ale";
+                    break;
+                case "7":
+                    drinkFlavor = "Apple Juice";
+                    break;
+                case "8":
+                    drinkFlavor = "Orange Juice";
+                    break;
+                case "9":
+                    drinkFlavor = "Cranberry Juice";
+                    break;
+                case "10":
                     drinkFlavor = "Arizona";
                     break;
-                }
-                default:
-                    System.out.println("Invalid Drink Flavor!");
-                }
-            } while (!choice.equalsIgnoreCase("1")
-        && !choice.equalsIgnoreCase("2")
-        && !choice.equalsIgnoreCase("3")
-        && !choice.equalsIgnoreCase("4")
-        && !choice.equalsIgnoreCase("5"));
+                case "11":
+                    drinkFlavor = "Sweet Tea";
+                    break;
+                case "12":
+                    drinkFlavor = "Lemonade";
+                    break;
+                case "13":
+                    drinkFlavor = "regular Water";
+                    break;
+                case "14":
+                    drinkFlavor = "Sparkling Water";
+                    break;
+                case "15":
+                    drinkFlavor = "Gatorade";
+                    break;
 
-        //Creates the new drink object
-         drink = new Drink(drinkSize, drinkFlavor);
+            }
+            break;
 
-        //Stores drink to the order
-        order.addItem(drink);
-        System.out.println("Drink successfully added!");
 
-    }
+
+        } while (true) ;
+
+
+            //Creates the new drink object
+            drink = new Drink(drinkSize, drinkFlavor);
+
+            //Prompts user for drink quantity and adds it to the order
+            int quantity;
+            quantity = Console.promptForInt("Enter Quantity: ");
+
+            for (int i = 0; i < quantity; i++) {
+                order.addItem(new Drink(drinkSize, drinkFlavor));
+
+            }
+            System.out.println("Drink successfully added!");
+        }
 
     /**
      * Displays different types of chips
@@ -518,11 +573,6 @@ public class OrderScreen {
                     System.out.println("Invalid Checkout!");
             }
         } while (!choice.equalsIgnoreCase("1") && !choice.equalsIgnoreCase("0"));
-
-
-
-
-
 
     }
 
