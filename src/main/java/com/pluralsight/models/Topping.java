@@ -1,6 +1,6 @@
 package com.pluralsight.models;
 
-public class Topping {
+public class Topping extends Product{
 
     private String name;
     private String type;
@@ -12,7 +12,6 @@ public class Topping {
         this.type = type;
         this.isExtra = isExtra;
     }
-
 
     //Getters and setters
     public String getName() {
@@ -39,7 +38,18 @@ public class Topping {
         this.isExtra = isExtra;
     }
 
-    
+
+
+    @Override
+    public double getPrice(){
+        return 0;  //No extra money for toppings 
+    }
+    //Generates toppings details on the receipt
+    @Override
+    public String getDetails(){
+        return
+                name  + " (" + type + ")" + (isExtra ? " (Extra)" : "");
+}
 
 
 
