@@ -1,10 +1,6 @@
 package com.pluralsight.ui;
-import com.pluralsight.models.Chips;
+import com.pluralsight.models.*;
 
-import com.pluralsight.models.Drink;
-import com.pluralsight.models.Order;
-import com.pluralsight.models.Sandwich;
-import com.pluralsight.models.Topping;
 import com.pluralsight.services.ReceiptFileManager;
 
 public class OrderScreen {
@@ -57,6 +53,7 @@ public class OrderScreen {
                     2- Add Drink
                     3- Add Chips
                     4- Checkout
+                    5- Signature Sandwiches
                     0- Cancel Order
             """;
             System.out.println(orderMenu);
@@ -75,6 +72,9 @@ public class OrderScreen {
                 case "4":
                     checkOut(order);
                     break;
+                case "5":
+                    addSignatureSandwich(order);
+                break;
                 case "0":
                     cancelOrder(order);
                     break;
@@ -432,6 +432,49 @@ public class OrderScreen {
         order.addItem(chips);
         System.out.println("Chips successfully added!");
 
+
+
+    }
+
+    /**
+     * Displays signature type options
+     * Creates new signature type object (sandwich)
+     * Adds the new object (item) to the order
+     */
+    public void addSignatureSandwich(Order order) {
+        Sandwich sandwich;
+       String signatureType;
+        String choice;
+        do {
+            String signatureMenu = """
+                Signature Menu:
+                1- BLT
+                2- Philly Cheese Steak
+            """;
+            System.out.println(signatureMenu);
+            choice = Console.promptForString("Enter Signature Type: ");
+
+            switch (choice.toUpperCase()) {
+                case "1":
+                    signatureType = "BLT";
+                    BLT blt = new BLT();
+                    order.addItem(blt);
+                    System.out.println(signatureType + " successfully added!");
+                    break;
+
+                case "2":
+                    signatureType = "Philly Cheese Steak";
+                    phillyCheeseSteak phillyCheeseSteak = new phillyCheeseSteak();
+                    order.addItem(phillyCheeseSteak);
+                    System.out.println(signatureType + " successfully added!");
+                    break;
+                    default:
+                        System.out.println("Invalid Signature Type!");
+                        break;
+
+            }
+        } while (!choice.equalsIgnoreCase("1")
+                &&!choice.equalsIgnoreCase("2"));
 
 
     }

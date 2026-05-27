@@ -4,7 +4,7 @@ public class phillyCheeseSteak extends Sandwich {
 
 
     //Constructor and super
-    public phillyCheeseSteak(int sandwichSize, boolean isToasted, String bread) {
+    public phillyCheeseSteak() {
         super(8, true, "White");
 
         //New phillycheese steak topping objects

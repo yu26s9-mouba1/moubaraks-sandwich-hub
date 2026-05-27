@@ -4,7 +4,7 @@ public class BLT extends Sandwich {
 
 
     //Constructor and super
-    public BLT(int sandwichSize, boolean isToasted, String bread) {
+    public BLT() {
         super(8, true, "white");
 
 
