@@ -8,7 +8,7 @@ public class BLT extends Sandwich {
         super(8, true, "white");
 
 
-        //New BLT Topping objects to be added to the order menu 
+        //New BLT Topping objects to be added to the toppings  menu
         Topping bacon = new Topping("Bacon", "Meat", false);
         addTopping(bacon);
 
