@@ -39,16 +39,7 @@ public class Topping {
         this.isExtra = isExtra;
     }
 
-
-    //Calculates the price after toppings
-//    public double getPrice() {
-//        double price = 0;
-//        if (type.equalsIgnoreCase("meat")) {
-//            if (isExtra()){
-//                price =
-//
-//            }
-
+    
 
 
 

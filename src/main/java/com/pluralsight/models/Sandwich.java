@@ -46,7 +46,7 @@ public class Sandwich extends Product {
 
 
     /**
-     *  Adds a topping to the sandwich's topping list
+     * Adds a topping to the sandwich's topping list
      */
     public void addTopping(Topping topping) {
         toppings.add(topping);
@@ -61,29 +61,33 @@ public class Sandwich extends Product {
     public double getPrice() {
         if (sandwichSize == 4) {
             return 5.50;
-        }
-        else if (sandwichSize == 8) {
+        } else if (sandwichSize == 8) {
             return 7.00;
-        }
-        else if (sandwichSize == 12) {
+        } else if (sandwichSize == 12) {
             return 8.50;
         }
         return 0;
 
-        }
+    }
 
     /**
      * Generates receipt and returns a readable description of the items
      */
     @Override
     //Generates receipt
-    public String getDetails(){
-        return   "Sandwich Size: " + sandwichSize +
-                " Bread Type: " + bread +
-                " Sandwich Toasted: " + isToasted;
-
+    public String getDetails() {
+        String details = "";
+        details += "Sandwich:\n";
+        details += "Size: " + sandwichSize + "\n";
+        details += "Bread: " + bread + "\n";
+        details += "Toasted: " + isToasted + "\n";
+        details += "Toppings: \n";
+        for (Topping topping : toppings) {
+            details += "- " + topping.getName() + "\n";
+        }
+        details += "Price: " + getPrice() + "\n";
+        return details;
     }
-
 
 
 }
