@@ -46,7 +46,7 @@ public class OrderScreen {
     public void displayOrderScreen(Order order) {
         String option;
         do {
-            System.out.println("                                                ================= Order Menu =============");
+            System.out.println("                                                ================= Order Menu ===============");
             System.out.println("                                                                1- Add Sandwich");
             System.out.println("                                                                2- Add Drink");
             System.out.println("                                                                3- Add Chips");
@@ -137,7 +137,7 @@ public class OrderScreen {
             System.out.println("                                                                  3- Large");
 
 
-            choice = Console.promptForString("                                                            Enter A Command: ");
+            choice = Console.promptForString("                                                             Enter A Command: ");
             switch (choice.toUpperCase()) {
                 case "1":
                     sandwichSize = 4;
@@ -166,24 +166,19 @@ public class OrderScreen {
         //Adds toppings
         String toppingChoice;
         do {
-            System.out.println("                                                       ================ Toppings Menu ========");
-            System.out.println("");
-            String toppingsMenu = """
-                                     Toppings Menu
-                                       1- Meats
-                                       2- Cheese
-                                       3- Other toppings
-                                       4- Select sauces
-                
-                                     """;
-            System.out.println(toppingsMenu);
-            toppingChoice = Console.promptForString("Enter A Command: ");
+            System.out.println("                                                  ================ Toppings Menu ==========");
+            System.out.println("                                                                  1- Meats");
+            System.out.println("                                                                  2- Cheese");
+            System.out.println("                                                                  3- Other Toppings");
+            System.out.println("                                                                  4- Select Sauces");
+
+            toppingChoice = Console.promptForString("                                                             Enter A Command: ");
             switch (toppingChoice.toUpperCase()) {
                 case "1": {
                     //Prompts user for meat options
-                    String toppingName = Console.promptForString("Choose Meat: Steak, Ham, Salami, Roast beef, chicken, bacon").toUpperCase();
+                    String toppingName = Console.promptForString("                                          Choose Meat: Steak, Ham, Salami, Roast beef, chicken, bacon").toUpperCase();
                     String toppingType = "Meats";
-                    boolean isExtra = Console.promptForBool("Extra Meat? (yes/no): ");
+                    boolean isExtra = Console.promptForBool("                                                       Extra Meat? (yes/no): ");
 
                     //Creates new meat topping
                     Topping meatTopping = new Topping(toppingName, toppingType, isExtra);
@@ -193,9 +188,9 @@ public class OrderScreen {
 
                     case "2": {
                         //Prompts user for cheese options
-                        String cheeseName = Console.promptForString("Choose Cheese: American, Provolone, Cheddar, Swiss").toUpperCase();
+                        String cheeseName = Console.promptForString("                                                               Choose Cheese: American, Provolone, Cheddar, Swiss").toUpperCase();
                         String cheeseType = "Cheese";
-                        boolean isExtra = Console.promptForBool("Extra Cheese? (yes/no): ");
+                        boolean isExtra = Console.promptForBool("                                                                                   Extra Cheese? (yes/no): ");
 
                         //Creates new cheese topping
                         Topping cheeseTopping = new Topping(cheeseName, cheeseType, isExtra);
@@ -206,7 +201,7 @@ public class OrderScreen {
                         //Prompt user for other toppings
                         String toppingName = Console.promptForString("Choose Other Toppings: lettuce, peppers, onions, tomatoes, jalapenos, cucumbers, pickles, guacamole, mushrooms").toUpperCase();
                         String toppingType = "Regular Toppings";
-                        boolean isExtra = Console.promptForBool("Extra Topping? (yes/no): ");
+                        boolean isExtra = Console.promptForBool("                                             Extra Topping? (yes/no): ");
 
                         //Creates new topping object and adds it to the order
                         Topping otherTopping = new Topping(toppingName, toppingType, isExtra);
@@ -217,7 +212,7 @@ public class OrderScreen {
                         //Prompts user for sauce options
                         String sauceName = Console.promptForString("Select Sauce: mayo, mustard, ketchup, ranch, thousand islands, vinaigrette").toUpperCase();
                         String sauceType = "Sauces";
-                        boolean isExtra = Console.promptForBool("Extra Sauce? (yes/no): ");
+                        boolean isExtra = Console.promptForBool("                                           Extra Sauce? (yes/no): ");
 
                         //Create the sauce topping and adds it to the order
                         Topping sauceTopping = new Topping(sauceName, sauceType, isExtra );
@@ -240,14 +235,11 @@ public class OrderScreen {
         boolean isToasted = false;
 
         do {
-            String toastingMenu = """
-                               Would You Like The Sandwich Toasted?
-                                         1- Yes
-                                         2- No
-                
-                                """;
-            System.out.println(toastingMenu);
-            toastedChoice = Console.promptForString("Enter A Command: ");
+            System.out.println("                                               Would You Like The Sandwich Toasted");
+            System.out.println("                                                               1-Yes");
+            System.out.println("                                                               2-No");
+
+            toastedChoice = Console.promptForString("                                                    Enter A Command: ");
 
             switch (toastedChoice.toUpperCase()) {
 
@@ -259,7 +251,7 @@ public class OrderScreen {
                     isToasted = false;
                     break;
                 }
-                default: System.out.println("Invalid Choice!");
+                default: System.out.println("                                                                    Invalid Choice!");
                 break;
 
             }
@@ -273,7 +265,7 @@ public class OrderScreen {
 
         //Stores the sandwich object in the order
         order.addItem(sandwich);
-        System.out.println("Sandwich successfully added!");
+        System.out.println("                                                  Sandwich successfully added!");
     }
 
 
