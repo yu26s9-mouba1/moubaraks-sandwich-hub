@@ -16,7 +16,7 @@ public class OrderScreen {
         String option;
 
         do {
-            System.out.println("                                              ================== Home Menu ===============");
+            System.out.println("                                              ================= Home Menu ===============");
             System.out.println("                                                               1. New Order");
             System.out.println("                                                               0- Exit ");
 
@@ -39,23 +39,22 @@ public class OrderScreen {
 
 
     /**
-     * Displays options for customers to begin shopping
-     * Each option directs customer to multiple options to shop
+     * Displays the order menu options for customers to begin shopping
+     * Handles Customer ordering actions
+     * Allows customers to add items, checkout or cancel order
      */
     public void displayOrderScreen(Order order) {
         String option;
         do {
-            String orderMenu = """
-                              Order Menu
-                           1- Add Sandwich
-                           2- Add Drink
-                           3- Add Chips
-                           4- Checkout
-                           5- Signature Sandwiches
-                           0- Cancel Order
-                           """;
-            System.out.println(orderMenu);
-            option = Console.promptForString("Enter A Command: ");
+            System.out.println("                                                ================= Order Menu =============");
+            System.out.println("                                                                1- Add Sandwich");
+            System.out.println("                                                                2- Add Drink");
+            System.out.println("                                                                3- Add Chips");
+            System.out.println("                                                                4- Checkout");
+            System.out.println("                                                                5- signature Sandwich");
+            System.out.println("                                                                0- Cancel Order");
+
+            option = Console.promptForString("                                                           Enter A Command: ");
 
             switch (option.toUpperCase()) {
                 case "1":
@@ -77,7 +76,7 @@ public class OrderScreen {
                     cancelOrder(order);
                     break;
                 default:
-                    System.out.println("Invalid option!");
+                    System.out.println("                                                            Invalid option!");
 
 
             }
