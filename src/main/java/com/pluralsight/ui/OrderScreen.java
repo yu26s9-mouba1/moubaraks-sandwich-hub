@@ -97,17 +97,14 @@ public class OrderScreen {
         String breadChoice;
         String breadType = "";
         do {
-            String sandwichMenu = """
-                               Select Your Bread:
-                                  1- White
-                                  2- Wheat
-                                  3- rye
-                                  4- wrap
-           
-                               """;
-            System.out.println(sandwichMenu);
+            System.out.println("                                                =============== Sandwiches Menu =============");
+            System.out.println("                                                                1- White");
+            System.out.println("                                                                2- Wheat");
+            System.out.println("                                                                3- Rye");
+            System.out.println("                                                                4- Wrap");
 
-            breadChoice = Console.promptForString("Enter A Command: ");
+
+            breadChoice = Console.promptForString("                                                           Enter A Command: ");
             switch (breadChoice.toUpperCase()) {
                 case "1":
                     breadType =  "White";
@@ -134,14 +131,13 @@ public class OrderScreen {
            String choice;
            int sandwichSize = 0;
         do {
-             String sandwichSizeMenu = """
-                                 Select Your Sandwich Size:
-                                    1 - Small
-                                    2 - Medium
-                                    3 - Large
-                                 """;
-            System.out.println(sandwichSizeMenu);
-            choice = Console.promptForString("Enter A Command: ");
+            System.out.println("                                                ============= Sandwich Size Menu ============");
+            System.out.println("                                                                  1- Small");
+            System.out.println("                                                                  2- Medium");
+            System.out.println("                                                                  3- Large");
+
+
+            choice = Console.promptForString("                                                            Enter A Command: ");
             switch (choice.toUpperCase()) {
                 case "1":
                     sandwichSize = 4;
@@ -153,7 +149,7 @@ public class OrderScreen {
                     sandwichSize = 12;
                         break;
                 default:
-                    System.out.println("Invalid option!");
+                    System.out.println("                                                                    Invalid option!");
 
             }
 
@@ -170,6 +166,8 @@ public class OrderScreen {
         //Adds toppings
         String toppingChoice;
         do {
+            System.out.println("                                                       ================ Toppings Menu ========");
+            System.out.println("");
             String toppingsMenu = """
                                      Toppings Menu
                                        1- Meats

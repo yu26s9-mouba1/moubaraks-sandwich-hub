@@ -1,0 +1,9 @@
+Sandwich:
+Size: 8
+Bread: Wrap
+Toasted: false
+Toppings: 
+- AMERICAN
+Price: $7.0
+
+Total Price: $7.0
