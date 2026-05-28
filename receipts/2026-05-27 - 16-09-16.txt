@@ -1,0 +1,23 @@
+Sandwich:
+Size: 8
+Bread: white
+Toasted: true
+Toppings: 
+- Bacon
+- Cheddar
+- Lettuce
+- Tomato
+- Ranch
+Price: 7.0
+
+Drink: medium regular Water $2.5
+Drink: medium regular Water $2.5
+Sandwich:
+Size: 4
+Bread: White
+Toasted: true
+Toppings: 
+- STEAK
+Price: 5.5
+
+Total Price: 17.5

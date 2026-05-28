@@ -1,0 +1,12 @@
+Sandwich:
+Size: 8
+Bread: White
+Toasted: true
+Toppings: 
+- Steak
+- American Cheese
+- Peppers
+- Mayo
+Price: $7.0
+
+Total Price: $7.0

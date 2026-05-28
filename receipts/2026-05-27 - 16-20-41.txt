@@ -1,0 +1,8 @@
+Sandwich:
+Size: 12
+Bread: Wrap
+Toasted: true
+Toppings: 
+Price: $8.5
+
+Total Price: $8.5

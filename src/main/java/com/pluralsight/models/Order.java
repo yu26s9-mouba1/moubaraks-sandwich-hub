@@ -43,7 +43,7 @@ public class Order {
         for (Product item : items) {
            details += item.getDetails() + "\n";
         }
-        details += "Total Price: " + getTotal() ;
+        details += "Total Price: $" + getTotal() ;
         return details;
 
     }

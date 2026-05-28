@@ -1,0 +1,10 @@
+Drink: large Lemonade $3.0
+Drink: large Lemonade $3.0
+Sandwich:
+Size: 12
+Bread: Rye
+Toasted: true
+Toppings: 
+Price: $8.5
+
+Total Price: $14.5

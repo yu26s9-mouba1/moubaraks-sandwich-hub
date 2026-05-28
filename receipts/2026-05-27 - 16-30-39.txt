@@ -1,0 +1,9 @@
+Sandwich:
+Size: 12
+Bread: Rye
+Toasted: true
+Toppings: 
+- LETTUCE, PEPPERS
+Price: $8.5
+
+Total Price: $8.5

@@ -85,7 +85,7 @@ public class Sandwich extends Product {
         for (Topping topping : toppings) {
             details += "- " + topping.getName() + "\n";
         }
-        details += "Price: " + getPrice() + "\n";
+        details += "Price: $" + getPrice() + "\n";
         return details;
     }
 

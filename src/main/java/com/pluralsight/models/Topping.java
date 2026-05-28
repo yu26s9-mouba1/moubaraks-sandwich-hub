@@ -42,7 +42,7 @@ public class Topping extends Product{
 
     @Override
     public double getPrice(){
-        return 0;  //No extra money for toppings 
+        return 0;  //No extra money for toppings
     }
     //Generates toppings details on the receipt
     @Override
