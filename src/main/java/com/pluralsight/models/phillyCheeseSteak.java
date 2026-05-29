@@ -23,6 +23,11 @@ public class phillyCheeseSteak extends Sandwich {
 
     }
 
+    @Override
+    public String getDetails() {
+        return "BLT Signature Sandwich: ";
+    }
+
 
 
 }

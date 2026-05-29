@@ -26,4 +26,9 @@ public class BLT extends Sandwich {
 
 
     }
+
+    @Override
+    public String getDetails(){
+        return "BLT Signature Sandwich: ";
+    }
 }

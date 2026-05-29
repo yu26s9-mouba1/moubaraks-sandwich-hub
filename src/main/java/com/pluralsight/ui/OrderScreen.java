@@ -144,7 +144,7 @@ public class OrderScreen {
                     sandwichSize = 4;
                     break;
                 case "2":
-                        sandwichSize = 8;
+                    sandwichSize = 8;
                         break;
                 case "3":
                     sandwichSize = 12;
@@ -468,7 +468,7 @@ public class OrderScreen {
 
         //Stores the new chip object into order
         order.addItem(chips);
-        System.out.println("                                                              Chips successfully added!");
+        System.out.println("                                                                 chips successfully added!");
 
 
 

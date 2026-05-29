@@ -1,0 +1,25 @@
+                                                                Sandwich:
+                                                                 Size: 8
+                                                                 Bread: white
+                                                                 Toasted: true
+                                                                 Toppings: 
+                                                               - Bacon
+                                                               - Cheddar
+                                                               - Lettuce
+                                                               - Tomato
+                                                               - Ranch
+                                                                Price: $7.0
+
+                                                            chipType : Potato Chips
+                                                            Drink: medium Apple Juice $2.5
+                                                            Drink: medium Apple Juice $2.5
+                                                                Sandwich:
+                                                                 Size: 4
+                                                                 Bread: White
+                                                                 Toasted: true
+                                                                 Toppings: 
+                                                               - BACON, BEEF
+                                                                Price: $5.5
+
+
+                                                             Total Price: $19.0

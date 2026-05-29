@@ -1,0 +1,11 @@
+                                                            BLT Signature Sandwich: 
+                                                            Philly Cheese Steak Signature Sandwich: 
+                                                            Size: 4
+                                                                 Bread: White
+                                                                 Toasted: true
+                                                                 Toppings: 
+                                                               - BACON
+                                                                Price: $5.5
+
+
+                                                             Total Price: $19.5
