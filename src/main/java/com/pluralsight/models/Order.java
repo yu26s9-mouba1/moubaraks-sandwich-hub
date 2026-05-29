@@ -39,11 +39,13 @@ public class Order {
      *Generates receipts with all the  details
      */
     public String getReceipt() {
+        System.out.println("                                                              ++ Order Details ++");
         String details = "";
+        String indent = "                                                 ";
         for (Product item : items) {
-           details += item.getDetails() + "\n";
+           details += "                                                            " + item.getDetails() + "\n";
         }
-        details += "Total Price: $" + getTotal() ;
+        details += "\n                                                             Total Price: $" + getTotal() ;
         return details;
 
     }

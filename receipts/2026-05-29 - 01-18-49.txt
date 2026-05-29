@@ -1,0 +1,13 @@
+                                                   Sandwich:
+Size: 4
+Bread: White
+Toasted: true
+Toppings: 
+-   BACON
+Price: $5.5
+
+                                                   Drink: medium Pepsi $2.5
+                                                   Drink: medium Pepsi $2.5
+                                                   Drink: medium Pepsi $2.5
+
+                                                    Total Price: $13.0

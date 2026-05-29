@@ -77,15 +77,15 @@ public class Sandwich extends Product {
     //Generates receipt
     public String getDetails() {
         String details = "";
-        details += "Sandwich:\n";
-        details += "Size: " + sandwichSize + "\n";
-        details += "Bread: " + bread + "\n";
-        details += "Toasted: " + isToasted + "\n";
-        details += "Toppings: \n";
+        details += "    Sandwich:\n";
+        details += "                                                                 Size: " + sandwichSize + "\n";
+        details += "                                                                 Bread: " + bread + "\n";
+        details += "                                                                 Toasted: " + isToasted + "\n";
+        details += "                                                                 Toppings: \n";
         for (Topping topping : toppings) {
-            details += "- " + topping.getName() + "\n";
+            details += "                                                               - " + topping.getName() + "\n";
         }
-        details += "Price: $" + getPrice() + "\n";
+        details += "                                                                Price: $" + getPrice() + "\n";
         return details;
     }
 
