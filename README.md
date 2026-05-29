@@ -169,17 +169,17 @@ Example:
 
 
 ## Object-Oriented Programming Concepts Used
-# Abstraction
+* Abstraction
 
-# Implemented using abstract Product class.
+* Implemented using abstract Product class.
 
-# Inheritance
+* Inheritance
 
-# Classes extending Product:
+* Classes extending Product:
 
-# Sandwich
-# Drink
-# Chips
+* Sandwich
+* Drink
+* Chips
 
 ## Signature sandwich classes:
 
@@ -189,11 +189,11 @@ Example:
 
 ## Private fields with public getters and setters.
 
-# Polymorphism
+* Polymorphism
 
-# Products stored and processed using Product references.
+* Products stored and processed using Product references.
 
-# Project Structure
+* Project Structure
 
 src
 ├── MainApp.java
