@@ -212,6 +212,10 @@ src
 │ └── ReceiptFileManager.java
 └── receipts
 
+## Updaded URL Diagram
+<img width="1184" height="663" alt="image" src="https://github.com/user-attachments/assets/bccf10e8-70b6-45bc-acae-0b3068975945" />
+
+
 
 
 ## Reflection
