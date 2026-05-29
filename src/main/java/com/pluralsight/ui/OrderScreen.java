@@ -282,15 +282,12 @@ public class OrderScreen {
         String drinkSize = "";
 
         do {
-            String drinkMenu = """
-                Drink Size Menu:
-                1- small
-                2- Medium
-                3- Large
-            """;
-            System.out.println(drinkMenu);
+            System.out.println("                                                   ================= Drink Menu ==============");
+            System.out.println("                                                                     1- Small");
+            System.out.println("                                                                     2- Medium");
+            System.out.println("                                                                     3- Large");
 
-            drinkChoice = Console.promptForString("Enter Drink Size: ");
+            drinkChoice = Console.promptForString("                                                          Enter Drink Size: ");
 
             switch (drinkChoice.toUpperCase()) {
                 case "1": {
@@ -306,7 +303,7 @@ public class OrderScreen {
                     break;
                 }
                 default:
-                    System.out.println("Invalid Drink Size!");
+                    System.out.println("                                                                  Invalid Drink Size!");
                     break;
 
             }
@@ -320,39 +317,36 @@ public class OrderScreen {
         String choice;
         String drinkFlavor = "";
         do {
-            String drinkFlavorMenu = """
-                        Flavors Menu:
-                        ++ Sodas ++
-                        1- Coke
-                        2- Sprite
-                        3- Pepsi
-                        4- Dr pepper
-                        5- Fanta
-                        6- Ginger Ale
-                    
-                        ++ Juices ++
-                        7- Apple Juice
-                        8- Orange Juice
-                        9- Cranberry Juice
-                    
-                        ++ Tea / Lemonade ++
-                        10- Arizona
-                        11- Sweet Tea
-                        12- Lemonade 
-                    
-                        ++ Water / Sports ++
-                        13- Regular Water
-                        14- Sparkling Water
-                        15- Gatorade
-                    
-                    """;
-            System.out.println(drinkFlavorMenu);
-            choice = Console.promptForString("Enter Drink Flavor: ");
+            System.out.println("                                                   ================= Flavors Menu =============");
+            System.out.println("                                                                      ++ Sodas ++");
+            System.out.println("                                                                      1- Coke");
+            System.out.println("                                                                      2- Sprite");
+            System.out.println("                                                                      3- Pepsi");
+            System.out.println("                                                                      4- Dr Pepper");
+            System.out.println("                                                                      5- Fanta");
+            System.out.println("                                                                      6- Ginger Ale");
+            System.out.println( "                                                                                                                       ");
+            System.out.println("                                                                      ++ Juices +");
+            System.out.println("                                                                      7- Apple Juice");
+            System.out.println("                                                                      8- Orange Juice");
+            System.out.println("                                                                      9- Cranberry Juice");
+            System.out.println();
+            System.out.println("                                                                      ++ Tea/Lemonade ++");
+            System.out.println("                                                                      10- Arizona");
+            System.out.println("                                                                      11- Sweet Tea");
+            System.out.println("                                                                      12- Lemonade");
+            System.out.println();
+            System.out.println("                                                                      ++ Water / Sports ++");
+            System.out.println("                                                                      13- Water");
+            System.out.println("                                                                      14- Sparkling Water");
+            System.out.println("                                                                      15- Gatorade");
+
+            choice = Console.promptForString("                                                                Enter Drink Flavor: ");
 
             //Handles switch options validation
             int option = Integer.parseInt(choice.toUpperCase());
             if (option < 1 || option > 15) {
-                System.out.println("Invalid Drink Flavor!");
+                System.out.println("                                                                          Invalid Drink Flavor!");
                 continue;
             }
 
@@ -416,13 +410,13 @@ public class OrderScreen {
 
             //Prompts user for drink quantity and adds it to the order
             int quantity;
-            quantity = Console.promptForInt("Enter Quantity: ");
+            quantity = Console.promptForInt("                                                                Enter Quantity: ");
 
             for (int i = 0; i < quantity; i++) {
                 order.addItem(new Drink(drinkSize, drinkFlavor));
 
             }
-            System.out.println("Drink successfully added!");
+            System.out.println("                                                            Drink successfully added!");
         }
 
     /**
@@ -434,17 +428,16 @@ public class OrderScreen {
 
         //Chip Type Options
         String choice;
+        System.out.println();
+        System.out.println("                                                 ================ Chips Menu =============== ");
+        System.out.println("                                                                 1- Potato Chips");
+        System.out.println("                                                                 2- Tortilla Chips");
+        System.out.println("                                                                 3- Corn Chips");
+
         String chipType = "";
         do {
-            String chipMenu = """
-                Chips Menu
-                1- Potato Chips
-                2- Tortilla Chips
-                3- Corn Chips
-            
-            """;
-            System.out.println(chipMenu);
-            choice = Console.promptForString("Enter Chip Type: ").toUpperCase();
+
+            choice = Console.promptForString("                                                             Enter Chip Type: ").toUpperCase();
             switch (choice.toUpperCase()) {
                 case "1":
                     chipType = "Potato Chips";
@@ -459,7 +452,7 @@ public class OrderScreen {
                     break;
 
                 default:
-                    System.out.println("Invalid Chip Type!");
+                    System.out.println("                                                                 Invalid Chip Type!");
                     break;
 
 
@@ -474,7 +467,7 @@ public class OrderScreen {
 
         //Stores the new chip object into order
         order.addItem(chips);
-        System.out.println("Chips successfully added!");
+        System.out.println("                                                              Chips successfully added!");
 
 
 
@@ -490,30 +483,29 @@ public class OrderScreen {
        String signatureType;
         String choice;
         do {
-            String signatureMenu = """
-                Signature Menu:
-                1- BLT
-                2- Philly Cheese Steak
-            """;
-            System.out.println(signatureMenu);
-            choice = Console.promptForString("Enter Signature Type: ");
+            System.out.println();
+            System.out.println("                                              =================== Signature Menu ================");
+            System.out.println("                                                               1- BLT");
+            System.out.println("                                                               2- Philly Cheese Steak");
+
+            choice = Console.promptForString("                                                              Enter Signature Type: ");
 
             switch (choice.toUpperCase()) {
                 case "1":
                     signatureType = "BLT";
                     BLT blt = new BLT();
                     order.addItem(blt);
-                    System.out.println(signatureType + " successfully added!");
+                    System.out.println( "                                                 " +  signatureType + " successfully added!");
                     break;
 
                 case "2":
                     signatureType = "Philly Cheese Steak";
                     phillyCheeseSteak phillyCheeseSteak = new phillyCheeseSteak();
                     order.addItem(phillyCheeseSteak);
-                    System.out.println(signatureType + " successfully added!");
+                    System.out.println("                                                 " + signatureType +  " successfully added!");
                     break;
                     default:
-                        System.out.println("Invalid Signature Type!");
+                        System.out.println("                                                     Invalid Signature Type!");
                         break;
 
             }
