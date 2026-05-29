@@ -8,7 +8,7 @@ This project demonstrates object-oriented programming principles such as inherit
 ## Home Screen
 * Start a new order
 * Exit the application
-* <img width="934" height="148" alt="image" src="https://github.com/user-attachments/assets/c6c7e7ef-d745-4f04-8f5e-b47a29d0239e" />
+ <img width="934" height="148" alt="image" src="https://github.com/user-attachments/assets/c6c7e7ef-d745-4f04-8f5e-b47a29d0239e" />
 
 
 ## Order Screen
@@ -19,7 +19,7 @@ Customers can:
 * Add signature sandwiches
 * Checkout
 * Cancel an order
-* <img width="555" height="268" alt="image" src="https://github.com/user-attachments/assets/0025f012-0d1f-4b8c-96ca-beb87462615d" />
+ <img width="555" height="268" alt="image" src="https://github.com/user-attachments/assets/0025f012-0d1f-4b8c-96ca-beb87462615d" />
 
 
 ## Custom Sandwich Builder
